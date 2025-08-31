@@ -1,0 +1,56 @@
+:root {
+  --bg: #0b0d10;
+  --accent: #00f0ff;
+  --text: #e0e0e0;
+  --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+body {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+header, footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #111;
+  border-bottom: 1px solid var(--accent);
+}
+
+main {
+  padding: 2rem;
+}
+
+h1, h2 {
+  color: var(--accent);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact li {
+  margin-bottom: 0.5rem;
+}
