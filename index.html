@@ -191,27 +191,30 @@ function show_infobox() {
 
     <style>
         #status {
-            display: inline-block;
-            vertical-align: top;
-            margin-top: 20px;
-            margin-left: 30px;
-            font-weight: bold;
-            color: rgb(120, 120, 120);
+            display: none; /* Oculta el texto de carga */
         }
-
         #progress {
-            height: 20px;
-            width: 300px;
+            display: none; /* Oculta la barra de progreso */
         }
 
         #infobox {
-            position: fixed; /* center relative to viewport */
-            background: green;
-            color: blue;
+            position: fixed;
+            background: rgba(25, 30, 40, 0.9);
+            color: #FFC850; /* Texto dorado */
             font-weight: bold;
-            padding: 12px 24px;
- /*           display: none; */
+            font-size: 18px;
+            padding: 15px 30px;
+            border: 2px solid #FFC850;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(255, 200, 80, 0.4);
+            cursor: pointer;
             z-index: 999999;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        #infobox:hover {
+            background: rgba(40, 45, 60, 0.9);
+            transform: scale(1.05);
         }
         div.emscripten { text-align: center; }
         div.emscripten_border { border: 1px solid black; }
@@ -237,10 +240,11 @@ function show_infobox() {
         }
 
         body {
-            font-family: arial;
+            font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
-            padding: none;
-            background-color:powderblue;
+            padding: 0;
+            background-color: #0f1219; /* Gris muy oscuro, casi negro */
+            color: #ffffff;
         }
 
         .topright{
